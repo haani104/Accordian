@@ -18,14 +18,25 @@ import AccountSection from './component/AccountSection'
 import PaySection from './component/PayAmountSection'
 import Footer from './component/Footer';
 
+
+//Allowed values for `bank`
+/*
+'BCA'
+'BNI'
+BRI
+DANAMON
+MANDIRI
+*/
+
+const bank='DANAMON'
 export default class App extends Component<{}> {
   render() {
     return (
       <ScrollView style={styles.container}>
         <Timer timestamp={1000}/>
-        <AccountSection accountNo="80777-081314416795"/>
+        <AccountSection accountNo="80777-081314416795" bank={bank}/>
         <PaySection amount="Rp320. 994"/>
-        <AccordionList />
+        <AccordionList bank={bank}/>
         <Footer />
       </ScrollView>
     )

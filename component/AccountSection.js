@@ -1,7 +1,14 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
 
-const AccountSection = ({ accountNo }) => {
+const AccountSection = ({ accountNo, bank }) => {
+  const bankLogo = {
+    'BCA': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BCA.png',
+    'BNI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BNI.png',
+    'BRI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BRI.png',
+    'DANAMON': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-Danamon.png',
+    'MANDIRI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-Mandiri.png',
+  }
   return (
     <View style={{
       borderTopWidth: 1,
@@ -16,7 +23,7 @@ const AccountSection = ({ accountNo }) => {
       <View style={{ flexDirection: 'row', alignItems: 'center',paddingVertical: 9, }}>
         <View>
           <Image
-            source={{ uri: 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BCA.png' }}
+            source={{ uri: bankLogo[bank] }}
             style={{ width: 90, height: 30, resizeMode: 'cover' }}
           />
         </View>
