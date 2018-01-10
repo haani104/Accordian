@@ -1,14 +1,7 @@
 import React from 'react'
 import { View, Text, Image } from 'react-native'
 
-const AccountSection = ({ accountNo, bank }) => {
-  const bankLogo = {
-    'BCA': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BCA.png',
-    'BNI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BNI.png',
-    'BRI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-BRI.png',
-    'DANAMON': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-Danamon.png',
-    'MANDIRI': 'https://ecs7.tokopedia.net/img/android_o2o/Logo-Mandiri.png',
-  }
+const AccountSection = ({ accountNo, bank, bankLogo }) => {
   return (
     <View style={{
       borderTopWidth: 1,
@@ -18,16 +11,16 @@ const AccountSection = ({ accountNo, bank }) => {
       paddingHorizontal: 10
     }}>
       <View style={{ paddingVertical: 9, }}>
-        <Text style={{fontSize: 16, fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.7)', textAlign: 'left'}}>Transfer ke nomor Virtual Account:</Text>
+        <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.7)', textAlign: 'left' }}>Transfer ke nomor Virtual Account:</Text>
       </View>
-      <View style={{ flexDirection: 'row', alignItems: 'center',paddingVertical: 9, }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 9, }}>
         <View>
           <Image
-            source={{ uri: bankLogo[bank] }}
+            source={{ uri: bankLogo }}
             style={{ width: 90, height: 30, resizeMode: 'cover' }}
           />
         </View>
-        <View style={{paddingHorizontal: 10}}>
+        <View style={{ paddingHorizontal: 10 }}>
           <Text
             style={{
               fontSize: 20,
@@ -37,8 +30,8 @@ const AccountSection = ({ accountNo, bank }) => {
             }}>{accountNo}</Text>
         </View>
       </View>
-      <View style={{paddingVertical: 9,}}>
-        <Text style={{fontSize: 14, fontWeight: '600', color: '#42b549'}}>Salin Nomor Rekening</Text>
+      <View style={{ paddingVertical: 9, }}>
+        <Text style={{ fontSize: 14, fontWeight: '600', color: '#42b549' }}>Salin Nomor Rekening</Text>
       </View>
     </View>
   )
