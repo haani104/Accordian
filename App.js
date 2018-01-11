@@ -46,13 +46,30 @@ export default class App extends Component<{}> {
 */
 
       // Generic VA Template
+      /*
       <ScrollView style={styles.container}>
         <GenericHeader />
         <AccountSection accountNo="80777-081314416795" bank={bank} bankLogo="https://ecs7.tokopedia.net/img/android_o2o/Logo-Danamon.png" />
-        <PaySection amount="Rp 320. 994" showDetailBtn={false} />
+        <PaySection amount="Rp 1.11111" showDetailBtn={false} isBankPage={false}/>
         <GenericPaymentGuide />
       </ScrollView>
+      */
 
+      //Bank Transfer Page
+      /*
+      <ScrollView style={styles.container}>
+        <Timer timestamp={1000} />
+        <AccountSection accountNo="80777-081314416795" bank={bank} bankLogo="https://ecs7.tokopedia.net/img/android_o2o/Logo-Danamon.png" />
+        <PaySection amount="Rp320. 994" showDetailBtn isBankPage/>
+        <Footer />
+      </ScrollView>
+      */
+
+      // Retail Page
+      // Zeplin - https://app.zeplin.io/project/58ec7cadad2a0b894bb30250/screen/5a250c65d753a610719e64c9
+      <ScrollView style={styles.container}>
+        <Timer timestamp={1000} />
+      </ScrollView>
     )
   }
 }
